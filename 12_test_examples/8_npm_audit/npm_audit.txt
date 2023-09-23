@@ -1,0 +1,3 @@
+'npm audit' - is command used to identify known security vulnerabilities in the dependencies of your project.
+'npm audit fix' - is a command that attempts to automatically update and fix the vulnerabilities that npm audit identifies. It does this by updating the dependencies to a version that has a fix for the vulnerabilities. 
+                  However, it only updates to versions that are compatible with the versions specified in your package.json file
