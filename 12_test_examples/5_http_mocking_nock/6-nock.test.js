@@ -41,3 +41,9 @@ describe('nock demo', () => {
     await assert.rejects(actual);
   });
 });
+
+// notes:
+// 1. nock will work with every http library, because it "wears itself" on top of node.js standard http module.
+// 2. like sinon, its important to revert after each test with nock.clearAll in afterEach.
+// But unlike sinon, every mock lasts for 1 call. Next call will be a real one
+// Still better clearAll in case there another failure before the call and it accidentally affects the next call.

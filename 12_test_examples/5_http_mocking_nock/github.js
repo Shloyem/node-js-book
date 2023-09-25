@@ -13,7 +13,6 @@ async function getElementorRepoStarCount() {
     throw new Error(`HTTP status '${response.status}'`);
 
   const json = await response.json();
-  console.log({ json });
 
   return json.stargazers_count;
 }
