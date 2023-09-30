@@ -1,6 +1,9 @@
+// run with "node .\12_test_examples\4_mocking_sinon\2-fakes.js"
+
 // fake - with fake you can create a "fake" method with a set behaviour,
 // and define if the fake method returns/resolves/rejects/throws.
 // Each fake is also a spy
+
 const sinon = require('sinon');
 
 const fake = sinon.fake.returns(42);
