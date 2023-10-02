@@ -1,0 +1,16 @@
+I uploaded a demo project there in the past, no longer as they charge a monthly subscription.
+Generally the steps are:
+1. Installing Heroku CLI, signing up, logging in
+2. Creating a file called procfile (no extension), with the deployment instructions. Something like:
+web: node app.js
+3. In the main project folder:
+  3.1 Heroku create
+  3.2 git push Heroku master
+  3.3 heroku ps:scale web=1 // to run the app
+  3.4 heroku open           // to open
+4. General note, for your project to work in cloud environment
+  - Don't write 
+  app.listen(3000) 
+  - Write instead
+  const port = process.env.PORT || 3000;
+  app.listen(port);
