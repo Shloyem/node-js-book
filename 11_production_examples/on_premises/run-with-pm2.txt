@@ -1,0 +1,22 @@
+Steps:
+
+1. Install with
+npm i pm2 -g
+
+2. After installation, to start:
+pm2 start app.js
+
+3. After it's started, the app with be online - up in the air.
+If you restart or close the terminal - server will keep running and remain online.
+
+4. To run service and view them:
+pm2 list
+
+5. To be able to change code, and have changes reflected and app reloaded once there are changes, run command:
+pm2 start app.js –watch
+
+6. To finally stop the app:
+pm2 stop app.js
+
+In this repo, you can run the express example to see it works:
+9_express_examples\app.js
