@@ -1,0 +1,50 @@
+// To add linter:
+// - npm install eslint -–save-dev
+// - npx eslint –init
+// - Add to package.json scripts: "lint": "npx eslint **/*.js"
+// - npm run lint
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "eqeqeq": [
+      "warn",
+      "always"
+    ],
+    "no-magic-numbers": [
+      "warn"
+    ],
+    "no-unreachable": [
+      "warn"
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 130
+      }
+    ],
+    "max-lines-per-function": [
+      "warn",
+      100
+    ],
+    "no-eval": [
+      "warn"
+    ],
+    "no-undef": [
+      "warn"
+    ],
+    "id-length": [
+      "error",
+      {
+        "max": 25,
+        "min": 1
+      }
+    ]
+  }
+}
