@@ -6,10 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "encrypt": "./cli_examples/bin/encrypt.js",
+    "decrypt": "./cli_examples/bin/decrypt.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "eslint": "^8.51.0",
     "http": "^0.0.1-security",
+    "lodash": "^4.1.0",
     "request": "^2.88.2"
   }
 }
