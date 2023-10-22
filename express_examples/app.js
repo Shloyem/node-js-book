@@ -1,8 +1,9 @@
-const fs = require('fs');
-const express = require('express');
-const path = require('path');
-const help = require('./src/routes/help');
+// const fs = require('fs');
+// const path = require('path');
 const morgan = require('morgan');
+const express = require('express');
+const help = require('./src/routes/help');
+const user = require('./src/routes/user');
 
 const app = express();
 app.listen(3000, () => {
@@ -10,6 +11,8 @@ app.listen(3000, () => {
 });
 
 app.use(morgan('common'));
+
+app.use('/user', user);
 
 app.use('/help', help);
 
