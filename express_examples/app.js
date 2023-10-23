@@ -1,5 +1,5 @@
 // const fs = require('fs');
-// const path = require('path');
+const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const help = require('./src/routes/help');
@@ -10,11 +10,26 @@ app.listen(3000, () => {
   console.log('Example app listening on port 3000!');
 });
 
-app.use(morgan('common'));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './src/views'));
 
-app.use('/user', user);
+app.get('/', (req, res) => {
+  res.render('index', { subtitle: 'This is subtitle' });
+});
 
-app.use('/help', help);
+// app.get('/:name/', (req, res) => {
+//   res.render('index2', { name: req.params.name });
+// });
+
+app.get('/:name/', (req, res) => {
+  res.render('index3', { params: req.params });
+});
+
+// app.use(morgan('common'));
+
+// app.use('/user', user);
+
+// app.use('/help', help);
 
 // without using a router:
 // app.get('/', (req, res) => {
