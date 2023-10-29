@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-describe('assert.ok()', () => {
+describe('assert examples', () => {
   it('will pass', () => {
     let actual = 'truthy';
     assert.ok(actual);
