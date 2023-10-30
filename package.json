@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha **/*.test.js",
+    "test": "cross-env NODE_ENV=test mocha './{,!(node_modules)/**}/*.test.js'",
     "lint": "npx eslint **/*.js"
   },
   "bin": {
@@ -25,7 +25,9 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "chai": "^4.3.10",
     "cross-env": "^7.0.3",
-    "eslint": "^8.52.0"
+    "eslint": "^8.52.0",
+    "sinon": "^17.0.0"
   }
 }
