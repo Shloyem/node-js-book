@@ -19,6 +19,7 @@ describe('stub demo', () => {
   });
 });
 
+// spy - adds the option to "spy" after a function call, how many times called, argument passed etc.
 describe('spy demo', () => {
   it('should use utf-8 for reading the file', async () => {
     // arrange
@@ -29,6 +30,6 @@ describe('spy demo', () => {
     // act
     await getLineCount(null);
     // assert
-    stub.calledOnceWithExactly(null, 'utf-8');
+    stub.calledOnceWithExactly(null, 'utf-8'); // in Sinon each stub is also a spy
   });
 });
