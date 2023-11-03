@@ -1,0 +1,2 @@
+For simple usages like making a few API calls, manipulating the data, and returning it, a recommended soltion with a free tier is Google Functions.
+I used it to deploy another project of Fantasy Premier League gameweek summary script.
